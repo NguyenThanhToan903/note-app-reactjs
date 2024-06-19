@@ -35,7 +35,9 @@ const resolvers = {
     folders: () => {
       return fakeData.folders;
     },
+    folders: (parent, args) => {},
   },
+
   Folder: {
     author: (parent, args) => {
       console.log({ parent, args });
