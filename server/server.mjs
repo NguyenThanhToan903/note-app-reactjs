@@ -23,19 +23,23 @@ const typeDefs = `#graphql
     name: String,
   }
 
-  type Query{
+  type Query {
     folders: [Folder],
-
+    folder(folderId: String): Folder
   }
-
- 
 `;
+
 const resolvers = {
   Query: {
     folders: () => {
       return fakeData.folders;
     },
-    folders: (parent, args) => {},
+    folder: (parent, args) => {
+      // Fixed this resolver name
+      const folderId = args.folderId;
+      console.log({ folderId });
+      return fakeData.folders.find((folder) => folder.id === folderId);
+    },
   },
 
   Folder: {
@@ -59,4 +63,4 @@ app.use(cors(), bodyParser.json(), expressMiddleware(server));
 
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
 
-console.log(`🚀 Server ready at http://localhost:4000`);
+console.log(`🚀 Server ready at http://127.0.0.1:4000`);
