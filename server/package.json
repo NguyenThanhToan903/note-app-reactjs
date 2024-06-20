@@ -19,6 +19,10 @@
     "http": "^0.0.1-security"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^12.1.1",
+    "mongoose": "^8.4.3",
     "nodemon": "^3.1.3"
   }
 }

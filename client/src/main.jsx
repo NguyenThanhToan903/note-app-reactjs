@@ -8,9 +8,7 @@ import router from "./router/index.jsx";
 import "../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Container maxWidth="lg" sx={{ textAlign: "center", marginTop: "50px" }}>
-      <RouterProvider router={router} />
-    </Container>
-  </React.StrictMode>
+  <Container maxWidth="lg" sx={{ textAlign: "center", marginTop: "50px" }}>
+    <RouterProvider router={router} />
+  </Container>
 );

@@ -28,6 +28,6 @@ export default {
   notes: [
     { id: "123", content: "<p>Go to park</p>", folderId: "1" },
     { id: "1234", content: "<p>Go to school</p>", folderId: "2" },
-    { id: "123", content: "<p>Go to supermarket</p>", folderId: "3" },
+    { id: "1235", content: "<p>Go to supermarket</p>", folderId: "1" },
   ],
 };
